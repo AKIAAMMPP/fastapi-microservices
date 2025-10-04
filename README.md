@@ -10,16 +10,7 @@ Les services sont orchestrés avec Docker Compose, utilisant Redis comme base de
 Construction avec Docker
 Pour construire et exécuter l'application avec Docker, suivez ces étapes :
 
-Prérequis :
-
-Installez Docker et Docker Compose sur votre machine .
-
-
-Cloner le dépôt :
-
-git clone https://github.com/AKIAAMMPP/fastapi-microservices.git
-cd fastapi-microservices
-
-Construire et lancer les conteneurs :
-
-docker-compose up --build -d
+  1-Installez Docker et Docker Compose sur votre machine .
+  2-Cloner le dépôt 
+  3-Construire et lancer les conteneurs :
+          docker-compose up --build -d
