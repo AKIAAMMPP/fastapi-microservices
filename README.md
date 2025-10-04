@@ -16,11 +16,10 @@ Installez Docker et Docker Compose sur votre machine .
 
 
 Cloner le dépôt :
-bashgit clone https://github.com/AKIAAMMPP/fastapi-microservices.git
+
+git clone https://github.com/AKIAAMMPP/fastapi-microservices.git
 cd fastapi-microservices
 
 Construire et lancer les conteneurs :
 
-bashdocker-compose up --build -d
-
-Le flag -d exécute les conteneurs en arrière-plan.
+docker-compose up --build -d
