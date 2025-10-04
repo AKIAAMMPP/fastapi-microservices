@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from redis_om import get_redis_connection, HashModel
-# from otel_instrumentation import  init_tracing_and_metrics
+from otel_instrumentation import  init_tracing_and_metrics
 
 
 app = FastAPI()
 
-# init_tracing_and_metrics(app, service_name="inventory-service")
+init_tracing_and_metrics(app, service_name="inventory-service")
 
 app.add_middleware(
     CORSMiddleware,

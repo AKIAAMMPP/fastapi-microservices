@@ -4,12 +4,12 @@ from fastapi.background import BackgroundTasks
 from redis_om import get_redis_connection, HashModel
 from starlette.requests import Request
 import requests, time
-# from otel_instrumentation import init_tracing_and_metrics
+from otel_instrumentation import init_tracing_and_metrics
 
 
 
 app = FastAPI()
-# init_tracing_and_metrics(app, service_name="payment-service")
+init_tracing_and_metrics(app, service_name="payment-service")
 
 app.add_middleware(
     CORSMiddleware,

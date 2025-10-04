@@ -5,6 +5,8 @@ services:
     image: redis:7
     ports:
       - "6379:6379"
+    volumes:
+      - redis-data:/data  # Monte un volume persistant dans le répertoire /data de Redis
     networks:
       - app-network
 
@@ -15,6 +17,8 @@ services:
       - "8001:8001"
     depends_on:
       - redis
+    volumes:
+      - ./inventory:/app  # Monte le dossier local inventory dans le conteneur
     networks:
       - app-network
 
@@ -26,6 +30,8 @@ services:
     depends_on:
       - redis
       - inventory
+    volumes:
+      - ./payment:/app  # Monte le dossier local payment dans le conteneur
     networks:
       - app-network
 
@@ -59,3 +65,6 @@ services:
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  redis-data:  # Définit un volume nommé redis-data pour persister les données
