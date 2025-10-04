@@ -11,6 +11,9 @@ Construction avec Docker
 Pour construire et exécuter l'application avec Docker, suivez ces étapes :
 
   1-Installez Docker et Docker Compose sur votre machine .
+  
   2-Cloner le dépôt 
+  
   3-Construire et lancer les conteneurs :
+
           docker-compose up --build -d
